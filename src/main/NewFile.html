@@ -19,6 +19,7 @@ function pdf(){
 	            var link = document.createElement('a');
 	            link.href = window.URL.createObjectURL(req.response);
 	            link.download = "PdfName-" + new Date().getTime() + ".pdf";
+	            link.click();
 	        } else if (typeof window.navigator.msSaveBlob !== 'undefined') {
 	            // IE version
 	            var blob = new Blob([req.response], { type: 'application/pdf' });
